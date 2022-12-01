@@ -2,3 +2,9 @@ fileignoreconfig:
 - filename: package-lock.json
   checksum: cec2da0efb9c2edcd882b9f86a35be1d975c44b72a09c904f90482a91aeb4757
 version: ""
+fileignoreconfig:
+- filename: package-lock.json
+  checksum: 1dc48495608254f06b069e84a154170923579047c6bffb74a7a01ab80b2cd3f8
+- filename: src/component/book/BookList.js
+  checksum: d6c8990cfc258a2ebd892d37ff6d8eb5ea991ef5004cac04e5f7f9c07788cb03
+version: ""
