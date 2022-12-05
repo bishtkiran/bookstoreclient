@@ -2,7 +2,7 @@ import React from "react";
 import renderWithRedux from "../../../util/testUtil";
 import BookContainer from "../BookContainer";
 import BookList from '../BookList';
-import getBookAction from "../../../module/book/bookAction";
+import {getBookAction} from "../../../module/book/bookAction";
 
 jest.mock('../BookList');
 jest.mock('../../../module/book/bookAction');
