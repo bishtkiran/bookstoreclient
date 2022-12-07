@@ -3,7 +3,7 @@ import {getBookService, getBooksByTitleService} from "./bookService";
 export const getBooksByTitle = (title) => async (dispatch) => {
     try {
         dispatch({ type: 'BOOKLISTPENDING'});
-        const books = await getBooksByTitleService();
+        const books = await getBooksByTitleService(title);
         dispatch({
             type: 'BOOKSBYTITLE',
             payload: books.data

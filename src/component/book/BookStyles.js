@@ -12,7 +12,8 @@ export default makeStyles(() => createStyles({
     },
     bookFilterPaper: {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        textAlign: 'center'
     },
     bookList: {
         width: '80%'
