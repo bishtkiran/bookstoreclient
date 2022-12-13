@@ -8,3 +8,7 @@ fileignoreconfig:
 - filename: src/component/book/BookList.js
   checksum: d6c8990cfc258a2ebd892d37ff6d8eb5ea991ef5004cac04e5f7f9c07788cb03
 version: ""
+fileignoreconfig:
+- filename: src/module/user/userActions.js
+  checksum: 4de35fc838b35b6e35e274efd07cf115e4e3b31e06c86966ccbc23e0d437ba3f
+version: ""
