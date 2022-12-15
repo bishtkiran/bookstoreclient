@@ -12,3 +12,9 @@ fileignoreconfig:
 - filename: src/module/user/userActions.js
   checksum: 4de35fc838b35b6e35e274efd07cf115e4e3b31e06c86966ccbc23e0d437ba3f
 version: ""
+fileignoreconfig:
+- filename: package-lock.json
+  checksum: 22ef0ce7915f04f22030ce8103bb70a48a954d0bcb70717360bc6941221150da
+- filename: src/component/user/__tests__/Login.test.js
+  checksum: 1e3776f73b40ef7165167b419a1b9cb6cb22170293a70f9f73856a6458a71376
+version: ""
