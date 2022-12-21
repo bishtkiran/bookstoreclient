@@ -1,5 +1,4 @@
-import { login } from "./userService"
-
+import { login, register } from "./userService"
 
 export const loginAction = (email, password) => async (dispatch) => {
   try {
@@ -17,4 +16,22 @@ export const loginAction = (email, password) => async (dispatch) => {
     dispatch({ type: 'LOGIN_ERROR'})
   }
 
+}
+
+export const registerAction = (user) => async (dispatch) => {
+  try {
+    dispatch({ type : 'REGISTER_PENDING'});
+    const response = await register(user);
+
+    dispatch({
+      type: 'USER_REGISTER',
+      payload: {
+        id: response.data,
+        ...user
+      }
+    });
+    dispatch({ type: 'REGISTER_SUCCESSFUL'});
+  } catch (error) {
+    dispatch({ type: 'REGISTER_ERROR'})
+  }
 }

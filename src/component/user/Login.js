@@ -1,7 +1,7 @@
-import { Box, Button, Paper, TextField, Typography } from "@material-ui/core";
+import { Box, Button, Link, Paper, TextField, Typography } from "@material-ui/core";
 import React, { useEffect } from "react";
 import makeStyle from './LoginStyle';
-import * as yup from 'yup'
+import * as yup from 'yup';
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { loginAction }from '../../module/user/userActions';
@@ -18,7 +18,9 @@ const validationSchema = yup.object({
     .string('Enter your password')
     .min(8, 'Password should be minimum 8 characters in length')
     .required('Password is required')
-})
+});
+
+
 
 const Login = () => {
     const classes = makeStyle();
@@ -50,7 +52,12 @@ const Login = () => {
         onSubmit: (values) => {
             dispatch(loginAction(values.email, values.password))
         }
-    })
+    });
+    
+    const handleRegister = () => {
+        history.push('/register');
+    }
+
     return (
         <form autoComplete="off" noValidate onSubmit={formik.handleSubmit}>
             <Box className={classes.wrapper}>
@@ -79,6 +86,8 @@ const Login = () => {
                         helperText={formik.touched.password && formik.errors.password}
                         error={formik.touched.password && Boolean(formik.errors.password)}/>
                         <Button className={classes.topMargin} type="submit" variant="contained" color="primary" disabled={loginPromise.isPending}>Login</Button>
+                        <br/>
+                        <Link component="button" variant="body2" onClick={handleRegister}>Register</Link>
                 </Paper>
 
             </Box>

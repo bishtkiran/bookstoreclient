@@ -4,7 +4,13 @@ export const USER_INITIAL_STATE = {
         isPending: false,
         isFulfilled: false,
         isAnyError: false
-    }
+    },
+    registerPromise: {
+        isPending: false,
+        isFulfilled: false,
+        isAnyError: false
+    },
+    user: null
 };
 
 const userReducer = (state = USER_INITIAL_STATE, action) => {
@@ -39,6 +45,44 @@ const userReducer = (state = USER_INITIAL_STATE, action) => {
             return {
                 ...state,
                 promise: {
+                    isPending: false,
+                    isFulfilled: true,
+                    isAnyError: false
+                }
+            }
+        }
+
+        // register
+        case 'USER_REGISTER' : {
+            return {
+                ...state,
+                user: action.payload
+            }
+        }
+        case 'REGISTER_PENDING' : {
+            return {
+                ...state,
+                registerPromise: {
+                    isPending: true,
+                    isFulfilled: false,
+                    isAnyError: false
+                }
+            }
+        }
+        case 'REGISTER_ERROR' : {
+            return {
+                ...state,
+                registerPromise: {
+                    isPending: false,
+                    isFulfilled: false,
+                    isAnyError: true
+                }
+            }
+        }
+        case 'REGISTER_SUCCESSFUL' : {
+            return {
+                ...state,
+                registerPromise: {
                     isPending: false,
                     isFulfilled: true,
                     isAnyError: false

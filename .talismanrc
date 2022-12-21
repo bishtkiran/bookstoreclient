@@ -18,3 +18,11 @@ fileignoreconfig:
 - filename: src/component/user/__tests__/Login.test.js
   checksum: 1e3776f73b40ef7165167b419a1b9cb6cb22170293a70f9f73856a6458a71376
 version: ""
+fileignoreconfig:
+- filename: src/module/user/__tests__/userAction.test.js
+  checksum: 4985bda36f1d77a884a18ac3d700d69b406d1de24f9c67d004643de2f75bb8f7
+- filename: src/component/user/__tests__/Register.test.js
+  checksum: 0e0deb60e0f473ca3f0d700c3204f1bbae8d53478265dc2c40ca28bd6434a4cd
+- filename: src/component/user/Register.js
+  checksum: 42aae5f4bd8c67d081e3ac6483f59b65c4b409afa1da650e4dc8aee771922781
+version: ""

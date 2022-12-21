@@ -4,6 +4,7 @@ import Layout from './layout/Layout';
 import BookContainer from './book/BookContainer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './user/Login';
+import Register from './user/Register';
 import { SnackbarProvider } from 'notistack';
 import Auth from './auth';
 
@@ -16,6 +17,7 @@ const App = () => {
         <Layout>
           <Switch>
             <Route path='/login'><Login /></Route>
+            <Route path='/register'> <Register /></Route>
             <Route exact path='/'>
               <Auth>
                 <BookContainer />
